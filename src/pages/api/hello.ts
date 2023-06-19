@@ -1,5 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from 'next'
+// import type { NextApiRequest, NextApiResponse } from 'next'
 
 // type Data = {
 //   name: string
@@ -13,12 +13,17 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 // }
 
 
-export default async function handler(req:any, res:any) {
+// geo
+export default async function GeoAPI(params:any,res:any) {
+  const APIKEY = `LwaxZjcW2AH1hILZqiQ68zj16CHPoKRjZDiU`
 
-  const APIKYE = `3f4adeaa9ab4bba4`
+  const response = await
 
-  const response = await fetch(`http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=${APIKYE}&keyword=${req.query.kyeword}&format=json`)
-  const hotGurume = await response.json()
-  res.status(200).json({ hotGurume })
+
+  fetch(`https://mcqmo68lcd.microcms.io/api/v1/blog`,
+  {
+    headers: { 'X-MICROCMS-API-KEY': APIKEY }
+  })
+  const geo = await response.json()
+  res.status(200).json({geo})
 }
-

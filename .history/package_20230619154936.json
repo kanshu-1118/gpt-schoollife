@@ -1,0 +1,33 @@
+{
+  "name": "gpt-schoollife",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.6.1",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@types/node": "20.1.0",
+    "@types/react": "18.2.6",
+    "@types/react-dom": "18.2.4",
+<<<<<<< HEAD
+    "framer-motion": "^10.12.8",
+=======
+    "framer-motion": "^10.12.10",
+>>>>>>> 76077aaece30ea21a3eaceeba20cc2b94e20018d
+    "next": "13.4.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "ress": "^5.0.2",
+<<<<<<< HEAD
+=======
+    "sass": "^1.62.1",
+>>>>>>> 76077aaece30ea21a3eaceeba20cc2b94e20018d
+    "typescript": "5.0.4"
+  }
+}
