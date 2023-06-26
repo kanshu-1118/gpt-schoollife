@@ -4,6 +4,7 @@ import Link from "next/link"
 import { useEffect, useState } from "react"
 import Header from "./components/header"
 import ContentsList from "./contentsList"
+import {color} from "../utils/colorTheme"
 
 
 
@@ -22,7 +23,11 @@ export default function Home() {
   },[])
   
   console.log(geo);
-
+  const users = [
+    { id: 1, name: "tanaka", text: "暖かくなってきたね！" },
+    { id: 2, name: "yamada", text: "パンケーキ食べたい" },
+    { id: 3, name: "watanabe", text: "お腹減った" },
+  ];
 
   return (
     <>
@@ -54,6 +59,7 @@ export default function Home() {
                     </Flex>
                   </Link>
                 )
+                
               })}
             </Flex>
           </Center>
