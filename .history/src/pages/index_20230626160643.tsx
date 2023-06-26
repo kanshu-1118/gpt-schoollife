@@ -44,12 +44,10 @@ export default function Home() {
           <Center flexFlow={'column'} gap={'40px'}>
             <Text as={'h2'} fontSize={'24px'} fontWeight={'bold'}>記事一覧</Text>
             <Flex justifyContent={"center"} gap="40px">
-              {geo.map((e : any,i : any) => {
+              {geo.map((e : any,i : number) => {
 
                 return(
-                  <Link 
-                    href={{pathname:"/blogContents", query: e }}
-                    passHref >
+                  <Link href="/blogContents" passHref >
                     <Flex key={i} w="300px" height={"200px"} bgColor="white" boxShadow={"base"} borderRadius={"10px"} >
                       <Img src={e.thumbnail.url} alt="" position={"absolute"} w="300px" h={"200px"} objectFit="cover" zIndex="0"  />
                       <Flex zIndex={"1"}>

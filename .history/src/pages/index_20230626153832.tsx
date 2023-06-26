@@ -1,7 +1,7 @@
 // import { Inter } from 'next/font/google'
 import { Box,Button,Center,Flex,Img,Text,Image } from "@chakra-ui/react"
 import Link from "next/link"
-import { useEffect, useState } from "react"
+import { useEffect, useState, createContext } from "react"
 import Header from "./components/header"
 import ContentsList from "./contentsList"
 
@@ -11,7 +11,6 @@ export default function Home() {
 
   const [geo,setGeo] = useState([])
   const [contentsID,setContentsID] = useState()
-  // const [Num,setNum] = useState()
   
   useEffect(() => {
     const fecthello = async () => {
@@ -23,7 +22,6 @@ export default function Home() {
   },[])
   
   console.log(geo);
-
 
 
   return (
@@ -44,14 +42,12 @@ export default function Home() {
           <Center flexFlow={'column'} gap={'40px'}>
             <Text as={'h2'} fontSize={'24px'} fontWeight={'bold'}>記事一覧</Text>
             <Flex justifyContent={"center"} gap="40px">
-              {geo.map((e : any,i : any) => {
+              {geo.map((e : any,i : number) => {
 
                 return(
-                  <Link 
-                    href={{pathname:"/blogContents", query: e }}
-                    passHref >
+                  <Link href="/blogContents" passHref>
                     <Flex key={i} w="300px" height={"200px"} bgColor="white" boxShadow={"base"} borderRadius={"10px"} >
-                      <Img src={e.thumbnail.url} alt="" position={"absolute"} w="300px" h={"200px"} objectFit="cover" zIndex="0"  />
+                      <Img src={e.thumbnail.url} alt="" position={"absolute"} w="300px" h={"200px"} objectFit="cover" zIndex="0" />
                       <Flex zIndex={"1"}>
                         <Text as={"h3"}>{e.title}</Text>
                       </Flex>

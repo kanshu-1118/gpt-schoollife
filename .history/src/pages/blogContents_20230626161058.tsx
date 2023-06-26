@@ -7,10 +7,6 @@ import { useRouter } from 'next/router'
 
 const blogContents : NextPage = () => {
 
-    const router = useRouter()
-
-    console.log(router.query);
-    
 
 
     return (
@@ -20,13 +16,13 @@ const blogContents : NextPage = () => {
             </Flex>
 
             {/* 記事タイトル */}
-            <Text w={"1000px"} h={"auto"} margin={"0 auto"}>{router.query.title}</Text>
+            <Text w={"1000px"} h={"auto"} margin={"0 auto"}>{}</Text>
 
             {/* 日時 */}
-            <Text w={"1000px"} h={"auto"} margin={"0 auto"}>{router.query.time}</Text>
+            <Text w={"1000px"} h={"auto"} margin={"0 auto"}></Text>
 
             {/* アイキャッチ画像 */}
-            <Img w={"1000px"} h={"auto"} margin={"0 auto"} src={"router.query.thumbnail"} ></Img>
+            <Img w={"1000px"} h={"auto"} margin={"0 auto"}></Img>
 
             {/* 参加メンバー */}
             <Box w={"1000px"} h={"auto"} margin={"0 auto"}>

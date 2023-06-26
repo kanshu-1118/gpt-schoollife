@@ -9,7 +9,7 @@ const blogContents : NextPage = () => {
 
     const router = useRouter()
 
-    console.log(router.query);
+    console.log(router.query.thumbnail);
     
 
 

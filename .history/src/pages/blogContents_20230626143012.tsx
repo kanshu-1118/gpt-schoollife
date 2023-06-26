@@ -1,18 +1,14 @@
-import { Flex,Text,Box,Img,Link } from '@chakra-ui/react'
+import { Flex,Text,Box,Image,Link } from '@chakra-ui/react'
 import { NextPage } from 'next'
 import { useEffect, useState } from "react"
 import React from 'react'
 import Header from './components/header'
-import { useRouter } from 'next/router'
+import Home from '.'
 
-const blogContents : NextPage = () => {
+const blogContents : NextPage = (props) => {
 
-    const router = useRouter()
-
-    console.log(router.query);
+    console.log(props);
     
-
-
     return (
         <>
             <Flex>
@@ -20,28 +16,28 @@ const blogContents : NextPage = () => {
             </Flex>
 
             {/* 記事タイトル */}
-            <Text w={"1000px"} h={"auto"} margin={"0 auto"}>{router.query.title}</Text>
+            <Text w={"1000px"} h={"auto"} margin={"0 auto"}>タイトル</Text>
 
             {/* 日時 */}
-            <Text w={"1000px"} h={"auto"} margin={"0 auto"}>{router.query.time}</Text>
+            <Text w={"1000px"} h={"auto"} margin={"0 auto"}></Text>
 
             {/* アイキャッチ画像 */}
-            <Img w={"1000px"} h={"auto"} margin={"0 auto"} src={"router.query.thumbnail"} ></Img>
+            <Image w={"1000px"} h={"auto"} margin={"0 auto"}></Image>
 
             {/* 参加メンバー */}
             <Box w={"1000px"} h={"auto"} margin={"0 auto"}>
                 <Text>参加メンバー</Text>
                 <Flex>
                     <Box>
-                        <Img></Img>
+                        <Image></Image>
                         <Text></Text>
                     </Box>
                     <Box>
-                        <Img></Img>
+                        <Image></Image>
                         <Text></Text>
                     </Box>
                     <Box>
-                        <Img></Img>
+                        <Image></Image>
                         <Text></Text>
                     </Box>
                 </Flex>

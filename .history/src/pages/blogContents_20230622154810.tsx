@@ -1,15 +1,11 @@
-import { Text } from '@chakra-ui/react'
-import { NextComponentType } from 'next'
+import { Flex,Text } from '@chakra-ui/react'
+import { NextPage } from 'next'
 import { useEffect, useState } from "react"
-
 import React from 'react'
 import Header from './components/header'
 
-interface propsType {
-    text:string
-}
+const blogContents : NextPage = () => {
 
-const contentsList : any = (props : propsType) => {
     const [geo,setGeo] = useState([])
     const [contentsID,setContentsID] = useState()
     
@@ -21,16 +17,13 @@ const contentsList : any = (props : propsType) => {
     }
     fecthello()
     },[])
-    
-    console.log(geo);
+
 
     return (
-        <>
+        <Flex>
             <Header />
-            <Text>{props.text}</Text>
-            <Text as={"h2"}>鼻くそ</Text>
-        </>
+        </Flex>
     )
 }
 
-export default contentsList
+export default blogContents

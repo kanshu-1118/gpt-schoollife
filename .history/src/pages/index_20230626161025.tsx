@@ -48,7 +48,7 @@ export default function Home() {
 
                 return(
                   <Link 
-                    href={{pathname:"/blogContents", query: e }}
+                    href={{pathname:"/blogContents", query: i }}
                     passHref >
                     <Flex key={i} w="300px" height={"200px"} bgColor="white" boxShadow={"base"} borderRadius={"10px"} >
                       <Img src={e.thumbnail.url} alt="" position={"absolute"} w="300px" h={"200px"} objectFit="cover" zIndex="0"  />

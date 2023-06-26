@@ -26,7 +26,7 @@ const blogContents : NextPage = () => {
             <Text w={"1000px"} h={"auto"} margin={"0 auto"}>{router.query.time}</Text>
 
             {/* アイキャッチ画像 */}
-            <Img w={"1000px"} h={"auto"} margin={"0 auto"} src={"router.query.thumbnail"} ></Img>
+            <Img w={"1000px"} h={"auto"} margin={"0 auto"}></Img>
 
             {/* 参加メンバー */}
             <Box w={"1000px"} h={"auto"} margin={"0 auto"}>
