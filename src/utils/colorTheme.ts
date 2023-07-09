@@ -3,6 +3,7 @@ const color = {
     base:"#FCF5E9",
     accent1:"#Green",
     accentYellow:"#E5E56B",
+    white:"#FEFEFE",
 };
 const font = {
     size: {

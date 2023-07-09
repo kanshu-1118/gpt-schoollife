@@ -12,7 +12,7 @@ const contentsList : any = (props : propsType) => {
     const router = useRouter();
     return (
         <>
-            <Header />
+            {/* <Header /> */}
             <Text>{props.text}</Text>
             <h1>
                 {router.query.name}

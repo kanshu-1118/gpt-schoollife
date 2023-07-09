@@ -4,15 +4,17 @@ import React, { useState } from 'react'
 
 const header = () => {
 
-    const [headerHight,setHeaderHight] = useState("60px")
 
-    const heightMargin = () => {
-        if (typeof document !== 'undefined') {
-            document.getElementsByTagName("body")[0].style.marginTop = headerHight
-        }
-    }
+    // headerの高さの余白コード
+    // const [headerHight,setHeaderHight] = useState("60px")
 
-    heightMargin()
+    // const heightMargin = () => {
+    //     if (typeof document !== 'undefined') {
+    //         document.getElementsByTagName("body")[0].style.marginTop = headerHight
+    //     }
+    // }
+
+    // heightMargin()
 
     return (
         <Flex w={"100vw"} h={headerHight} position={"fixed"} top={'0'} justifyContent={'flex-end'} bgColor={'#fefefe'} zIndex={"10"} boxShadow={"0px -1px 4px #010101"}>

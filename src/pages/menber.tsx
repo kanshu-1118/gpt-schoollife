@@ -8,7 +8,9 @@ const menber = () => {
     
 
     return (
-        <Header />
+        // <Header />
+        <>
+        </>
     )
 }
 
