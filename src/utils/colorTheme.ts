@@ -1,8 +1,9 @@
 const color = {
     main:"#40659D",
     base:"#FCF5E9",
-    accent1:"#Green",
+    accentGreen:"#Green",
     accentYellow:"#E5E56B",
+    accentRed:"#F53D3D",
     white:"#FEFEFE",
 };
 const font = {
