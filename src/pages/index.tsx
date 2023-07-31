@@ -39,6 +39,7 @@ export default function Home() {
           <Center w={"1392px"} padding={"64px 0"} borderRadius={"20px"} flexFlow={'column'} gap={'40px'} bgColor={color.white}>
             <Text as={'h2'} color={color.main} fontSize={'32px'} fontWeight={'bold'}>新着記事</Text>
             <Flex gap="46px" flexWrap={"wrap"} maxWidth={"1112px"}>
+
               {geo.map((e : any,i : number) => {
                 return(
                   <Link 
