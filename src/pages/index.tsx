@@ -1,5 +1,6 @@
 // import { Inter } from 'next/font/google'
-import { Box,Button,Center,Flex,Img,Text,Image } from "@chakra-ui/react"
+import { Box,Button,Center,Flex,Img,Text,Image,chakra,shouldForwardProp } from "@chakra-ui/react"
+import { motion,isValidMotionProp } from "framer-motion"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import Header from "./components/header"
@@ -7,6 +8,11 @@ import ContentsList from "./contentsList"
 import {color} from "../utils/colorTheme"
 import { Main } from "next/document"
 import ContTemplate from "./components/contTemplate"
+import MenberWrap from "./components/menberWrap"
+
+const AnimationBox = chakra(motion.div, {
+  shouldForwardProp:(prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
+});
 
 
 export default function Home() {
@@ -82,7 +88,7 @@ export default function Home() {
           <Center w={"1392px"} padding={"64px 0"} borderRadius={"20px"} flexFlow={'column'} gap={'40px'}>
             <Text as={'h2'} color={color.main} fontSize={'32px'} fontWeight={'bold'}>メンバー</Text>
             <Center>
-              
+              <MenberWrap />
             </Center>
           </Center>
         </Flex>
