@@ -6,9 +6,13 @@ import { useEffect, useState } from "react"
 import Header from "./components/header"
 import ContentsList from "./contentsList"
 import {color} from "../utils/colorTheme"
-import { Main } from "next/document"
 import ContTemplate from "./components/contTemplate"
 import MenberWrap from "./components/menberWrap"
+import SnsContents from "./components/snsContents"
+import SnsButton from "./components/snsButton"
+import sns from '@/lib/sns';
+import snsbutton from "@/lib/snsbutton"
+import Footer from "./components/footer"
 
 const AnimationBox = chakra(motion.div, {
   shouldForwardProp:(prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
@@ -16,6 +20,9 @@ const AnimationBox = chakra(motion.div, {
 
 
 export default function Home() {
+
+  const snsArray = sns.member.ArrayList
+  const snsBtnArray = snsbutton.snsbutton.ArrayList
 
   const [geo,setGeo] = useState([])
   const [contentsID,setContentsID] = useState()
@@ -32,7 +39,7 @@ export default function Home() {
 
   return (
     <>
-      <Flex w='100vw' bgColor={color.base} alignItems="center" flexFlow={"column"}>
+      <Flex w='100vw' bgColor={color.base} alignItems="center" flexFlow={"column"} >
         {/* <Flex h="60vh" bgColor={"skyblue"}>
           <Text as="h1" fontSize={"60px"}>GPT-BOYS</Text>
         </Flex> */}
@@ -91,7 +98,29 @@ export default function Home() {
               <MenberWrap />
             </Center>
           </Center>
+          <Center flexDirection={"column"} gap={"60px"}>
+            <Text as={"h3"} fontWeight={"bold"} fontSize={"24px"} color={color.main}>SNS</Text>
+            <Flex gap={"100px"}>
+              {
+                snsArray.map((e,i) => {
+                  return(
+                    <SnsContents name={e.name} color={e.color} img={e.img} btn={e.btn} linkbtn={e.linkbtn} link={e.link}/>
+                  )
+                })
+              }
+            </Flex>
+            {/* <SnsContents /> */}
+            <Flex gap={"75px"}>
+              {snsBtnArray.map((e,i) => {
+                return(
+                  <SnsButton name={e.name} icon={e.icon} color={e.color} link={e.link} linkbtn={e.linkbtn} />
+                )
+              })}
+            </Flex>
+          </Center>
+          
         </Flex>
+        <Footer />
       </Flex>
     </>
   )

@@ -1,6 +1,6 @@
 import { Flex,Center, Image, Text, useStatStyles, styled } from '@chakra-ui/react'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { color } from '@/utils/colorTheme'
 import category from '@/lib/category'
 
@@ -11,6 +11,8 @@ const header = () => {
     const [hoveraction,setHoveraction] = useState(false)
     const [opacity,setOpacity] = useState("0")
     const [bordermouve,setBordermove] = useState("-100%")
+    // console.log(window.scrollY);
+    
     // const heightMargin = () => {
     //     if (typeof document !== 'undefined') {
     //         document.getElementsByTagName("body")[0].style.marginTop = headerHight
@@ -19,8 +21,28 @@ const header = () => {
 
     // heightMargin()
 
+    const [scrollY, setScrollY] = useState(0)
+    const [scrollev, setScrollev] = useState(scrollY)
+    const [translate, setTranslate] = useState("0")
+
+    const handleScroll = () => {
+        setScrollY(window.scrollY)
+    }
+    
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll )
+        if (scrollY > scrollev) {
+            setTranslate("-200px")
+            setScrollev(scrollY)
+            
+        } else if (scrollY < scrollev) {
+            setTranslate("0")
+            setScrollev(scrollY)
+        }
+    },[scrollY])
+
     return (
-        <Flex w={"calc(100vw - 120px)"} h={headerHight} padding={"0 24px"} position={"fixed"} marginTop={"30px"} top={'0'} justifyContent={'space-between'} bgColor={'#fefefe'} zIndex={"10"} borderRadius={"10px"} boxShadow={"0px 4px 2px rgba(0,0,0,0.03)"}>
+        <Flex w={"calc(100vw - 120px)"} h={headerHight} transition={"0.2s ease"} transform={`translateY(${translate})`} padding={"0 24px"} position={"fixed"} marginTop={"30px"} top={'0'} justifyContent={'space-between'} bgColor={'#fefefe'} zIndex={"10"} borderRadius={"10px"} boxShadow={"0px 4px 2px rgba(0,0,0,0.03)"}>
             <Center>
                 <Text as={"h1"} fontWeight={"bold"}>GPT-ボーイズ</Text>
             </Center>
@@ -59,8 +81,8 @@ const header = () => {
                                                                         href={"#"}
                                                                     >
                                                                         <Flex as={"button"}h={"calc(100% + 4px)"} position={"relative"} overflow={"hidden"} transition={"1s ease"} _before={{ content:'""', w:"100%", h:"2px", position:"absolute", display:"block", left:bordermouve, bottom:"0", bgColor:`${color.main}`}}
-                                                                            onMouseEnter={(() => {setBordermove("0px");})}
-                                                                            onMouseLeave={(() => {setBordermove("-100%");})}
+                                                                            onMouseEnter={(() => {setBordermove("0px")})}
+                                                                            onMouseLeave={(() => {setBordermove("-100%")})}
                                                                         ><Text as={"p"} fontSize={"14px"}>{e}</Text></Flex>
                                                                     </Link>
                                                                 )
