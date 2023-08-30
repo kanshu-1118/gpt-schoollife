@@ -77,13 +77,13 @@ const header = () => {
                                                         <Flex flexDirection={"column"} gap={"8px"}>
                                                             {e.child.map((e,index) => {
                                                                 return(
-                                                                    <Link
-                                                                        href={"#"}
-                                                                    >
+                                                                    <Link href={"#"}>
                                                                         <Flex as={"button"}h={"calc(100% + 4px)"} position={"relative"} overflow={"hidden"} transition={"1s ease"} _before={{ content:'""', w:"100%", h:"2px", position:"absolute", display:"block", left:bordermouve, bottom:"0", bgColor:`${color.main}`}}
                                                                             onMouseEnter={(() => {setBordermove("0px")})}
                                                                             onMouseLeave={(() => {setBordermove("-100%")})}
-                                                                        ><Text as={"p"} fontSize={"14px"}>{e}</Text></Flex>
+                                                                        >
+                                                                            <Text as={"p"} fontSize={"14px"}>{e}</Text>
+                                                                        </Flex>
                                                                     </Link>
                                                                 )
                                                             })}
