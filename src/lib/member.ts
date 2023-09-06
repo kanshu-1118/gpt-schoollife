@@ -9,6 +9,8 @@ const member : memberType = {
             img : "kansyu",
             state:"リーダー",
             text:"",
+            color:"",
+            sound:"./images/",
         },
         {
             name : "ほんの",
@@ -17,6 +19,8 @@ const member : memberType = {
             img : "honno",
             state:"動画制作",
             text:"サイトのデザインを担当。休日はyoutubeで動画をだらだら見ながらすごしています。",
+            color:"",
+            sound:"string",
         },
         {
             name : "りょ〜",
@@ -24,7 +28,9 @@ const member : memberType = {
             hobby : "マッチング",
             img : "ryo",
             state:"突撃班",
-            text:"サイトのデザインを担当。休日はyoutubeで動画をだらだら見ながらすごしています。",
+            text:"サイトのエンジニア担当兼取材にいくひと。休日はアコムの支払いのためバイトに明けくれる",
+            color:"linear-gradient(to right,#e60000,#f39800,#fff100,#009944,#0068b7,#1d2088,#920783) 0% center/200%",
+            sound:"./images/pato.mp3",
         },
         {
             name : "じろ〜",
@@ -33,6 +39,8 @@ const member : memberType = {
             img : "jiro",
             state:"デザイナー",
             text:"サイトのデザインを担当。休日はyoutubeで動画をだらだら見ながらすごしています。",
+            color:"",
+            sound:"string",
         },
         
         {
@@ -42,6 +50,8 @@ const member : memberType = {
             img : "uo",
             state:"SNS担当",
             text:"サイトのデザインを担当。休日はyoutubeで動画をだらだら見ながらすごしています。",
+            color:"",
+            sound:"string",
         },
         
         {
@@ -51,6 +61,8 @@ const member : memberType = {
             img : "keisi",
             state:"TIKTOK担当",
             text:"サイトのデザインを担当。休日はyoutubeで動画をだらだら見ながらすごしています。",
+            color:"",
+            sound:"string",
         },
         {
             name : "む〜さん",
@@ -59,6 +71,8 @@ const member : memberType = {
             img : "musan",
             state:"",
             text:"サイトのデザインを担当。休日はyoutubeで動画をだらだら見ながらすごしています。",
+            color:"",
+            sound:"string",
         },
         
     ]

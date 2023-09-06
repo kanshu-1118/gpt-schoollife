@@ -10,6 +10,8 @@ export type group = {
     img:string;
     state:string;
     text:string;
+    color:string;
+    sound:string;
 }
 
 export type memberType = {
