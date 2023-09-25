@@ -58,7 +58,7 @@ const menberWrap: NextComponentType = () => {
                         }}>
                         <Image src='./images/pre.svg' alt={""}/>
                     </Center>
-                    <Center w={"168px"} h={"168px"} borderRadius={"100px"} background={move == 2 && " linear-gradient(to right,#e60000,#f39800,#fff100,#009944,#0068b7,#1d2088,#920783) 0% center/200%"} overflow={"hidden"}  border={`4px solid ${color.main}`}>
+                    <Center w={"168px"} h={"168px"} borderRadius={"100px"} overflow={"hidden"}  border={`4px solid ${color.main}`}>
                         <Flex display={"flex"}  height={"140px"}  transition={"0.5s ease"} gap={"40px"} marginLeft={"100px"} transform={`translateX(calc(-180 * ${move}px))`}>
                             {/* 45 -130 -315 -490 -665 -840 1015    -175 */}
                             {members.map((e,i) => {
