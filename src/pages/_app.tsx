@@ -3,8 +3,9 @@ import * as gtag from "../lib/gtag";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import type { AppProps } from 'next/app'
-import { ChakraProvider } from '@chakra-ui/react'
+import { background, ChakraProvider } from '@chakra-ui/react'
 import { Noto_Sans_JP } from 'next/font/google'
+import { AnimatePresence } from "framer-motion";
 
 // import "ress"
 const notojp = Noto_Sans_JP({
@@ -12,6 +13,9 @@ const notojp = Noto_Sans_JP({
   subsets: ["latin"],
   display: "swap",
 });
+
+
+
 
 export default function App({Component,pageProps} : AppProps){
 
@@ -45,9 +49,11 @@ export default function App({Component,pageProps} : AppProps){
           `,
         }}
       />
-      <ChakraProvider>
-        <Component {...pageProps} />
-      </ChakraProvider>
+      <AnimatePresence mode="wait">
+        <ChakraProvider>
+          <Component {...pageProps} />
+        </ChakraProvider>
+      </AnimatePresence>
     </main>
   )
 }
