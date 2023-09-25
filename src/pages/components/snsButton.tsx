@@ -40,10 +40,10 @@ const snsButton = (props : propsType ) => {
                     transition: {duration:0.2},
                 }}
                 transition={{
-                    duration: 1,
+                    duration: "1",
                     // ease:"",
-                    times:[0,0.2],
-                    repeatDelay: 0,
+                    times:"[0,0.2]",
+                    repeatDelay: "0",
                 }}
                 
                 _before={{

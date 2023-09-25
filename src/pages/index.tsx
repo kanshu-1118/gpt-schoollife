@@ -58,7 +58,7 @@ export default function Home() {
                   <Link 
                     href={{
                       pathname:"/blogContents",
-                      query:{i}
+                      query:{i} 
                     }}
                     // passHref
                     key={i}

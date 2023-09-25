@@ -29,11 +29,11 @@ const snsContents = (props : propsType) => {
                             rotate:[0,180,0],
                         }}
                         transition={{
-                            duration: 6,
+                            duration: "6",
                             // ease:"",
-                            times:[0,1,0],
-                            repeat: Infinity,
-                            repeatDelay: 0,
+                            times:"[0,1,0]",
+                            repeat: "Infinity",
+                            repeatDelay: "0",
                         }}
                         >
 

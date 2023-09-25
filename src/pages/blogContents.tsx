@@ -45,7 +45,7 @@ const blogContents : NextPage = () => {
                         <Center position={"relative"} bgColor={color.white} flexDir={"column"} w={"850px"} margin={"200px"}>
                             <Flex w={"100%"}>
                                 <Center bgColor={color.main}  margin={"10px 20px"} p={"6px 16px"} borderRadius={"10px"}>
-                                    <Text fontWeight={"12px"} color={color.white} >{e.selectAI[0]}</Text>
+                                    {/* <Text fontWeight={"12px"} color={color.white} >{e.aiType[0]}</Text> */}
                                 </Center>
                             </Flex>
                             <Center gap={"10px"} flexDir={"column"} marginBottom={"40px"}>

@@ -37,11 +37,11 @@ const framerTest = () => {
                     backgroundColor:["#fff","#fff","#000","#000","#000","#000"]
                 }}
                 transition={{
-                    duration: 6,
+                    duration: "6",
                     // ease:"",
-                    times:[0,0.2,0.5,0.8,0],
-                    repeat: Infinity,
-                    repeatDelay: 0,
+                    times:"[0,0.2,0.5,0.8,0]",
+                    repeat: "Infinity",
+                    repeatDelay: "0",
                 }}
                 // transition={"infinty"}animation={"infinite"}
                 >
