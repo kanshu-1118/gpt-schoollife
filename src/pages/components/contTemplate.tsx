@@ -21,7 +21,7 @@ function contTemplate(props : propsType) {
                 
             </Flex>
             <Flex gap="46px" flexWrap={"wrap"} maxWidth={"1112px"}>
-                {props.api.map((e : any,i : number) => {
+                {props.api?.map((e : any,i : number) => {
                 
                 if (e.tag.includes(props.if)) {
                     if (i < 3 ) {
