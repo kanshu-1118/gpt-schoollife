@@ -20,7 +20,7 @@ const menberWrap: NextComponentType = () => {
 
     const [wavFile, setWavFile] = useState('./images/gogochance.mp3')
  
-    const audioRef = useRef(null)
+    const audioRef = useRef<any>(null)
     
     const handlePlay = () => {
         audioRef.current.play()
