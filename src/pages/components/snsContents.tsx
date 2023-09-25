@@ -39,7 +39,7 @@ const snsContents = (props : propsType) => {
 
                     </AnimationBox>
                 </Center>
-                <Link href={props.link} passHref>
+                <Link href={props.link ?? `#`} passHref>
                     <Flex as={"button"} w={"266px"} h={"57px"} fontSize={"18px"} p={"0px 18px"} alignItems={"center"} justifyContent={"space-between"} borderRadius={"10px"} fontWeight={"bold"} color={props.color} border={`5px solid ${props.color}`}>
                         {props.btn}
                         <Image src={props.linkbtn} w={"18px"} alt={``} />

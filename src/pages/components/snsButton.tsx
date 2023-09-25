@@ -24,7 +24,7 @@ const snsButton = (props : propsType ) => {
     // ),[])
 
     return (
-        <Link href={props.link} passHref>
+        <Link href={props.link ?? `#`} passHref>
             <AnimationBox
                 w="200px"
                 h="57px"

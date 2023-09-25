@@ -60,7 +60,7 @@ export default function Home() {
                       pathname:"/blogContents",
                       query:{i} 
                     }}
-                    // passHref
+                    passHref
                     key={i}
                   >
                     <Flex key={i} w="340px" height={"217px"} boxShadow={"base"} borderRadius={"10px"} bgImage={`url(${e.thumbnail.url})`} bgSize={"cover"} bgPosition={"center"} >
