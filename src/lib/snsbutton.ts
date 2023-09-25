@@ -1,4 +1,4 @@
-import { snsbuttonType } from "@/types/snsbuttontype";
+import { snsbuttonType } from "@/types/snsbuttonType";
 import { color } from "@/utils/colorTheme";
 
 const snsbutton : snsbuttonType = {
