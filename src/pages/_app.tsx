@@ -6,6 +6,7 @@ import type { AppProps } from 'next/app'
 import { background, ChakraProvider } from '@chakra-ui/react'
 import { Noto_Sans_JP } from 'next/font/google'
 import { AnimatePresence } from "framer-motion";
+import '../styles/globals.css';
 
 // import "ress"
 const notojp = Noto_Sans_JP({

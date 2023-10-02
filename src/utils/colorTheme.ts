@@ -6,6 +6,7 @@ const color = {
     accentRed:"#F53D3D",
     accentRed2:"#F56D6D",
     white:"#FEFEFE",
+    color:"#010101",
 };
 const font = {
     size: {
