@@ -35,7 +35,6 @@ const blogContents : NextPage = () => {
             <Header />
             {geo.map((e:any,i:number) => {
                 console.log(e)
-                console.log(member);
                 
                 {if (i == router.query.i as unknown as number) {
                     return (
@@ -128,7 +127,6 @@ const blogContents : NextPage = () => {
                             </Center>
                             <Center gap={"80px"}>
                                 <Text fontWeight={"bold"} fontSize={"24px"} color={color.main}>関連記事</Text>
-                                <Center></Center>
                             </Center>
                         </Center>
                     )
