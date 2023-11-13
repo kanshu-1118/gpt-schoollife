@@ -1,6 +1,6 @@
 import { Flex, Center,Text,Image } from '@chakra-ui/react'
 import { NextPage } from 'next'
-import { useEffect,useState } from 'react'
+import { useEffect,useState,useRef } from 'react'
 import { useRouter } from 'next/router'
 import React from 'react'
 import Header from './components/header'
@@ -15,9 +15,11 @@ import SnsContents from './components/snsContents'
 
 
 const blogContents : NextPage = () => {
+    const elm = useRef<HTMLDivElement>(null);
     const router = useRouter()
     const [geo,setGeo] = useState([])
     const [contWidth,setContwidth] = useState("650px")
+    const [askHeight,setAskHeight] = useState(true)
     const snsArray = sns.member.ArrayList
     const snsBtnArray = snsbutton.snsbutton.ArrayList
 
@@ -28,7 +30,10 @@ const blogContents : NextPage = () => {
             setGeo(data.geo.contents)
         }
         fecthello()
-    },[])
+        const clientHeight = elm?.current?.clientHeight;
+        console.log(clientHeight);
+        console.log(JSON.stringify(elm?.current?.getBoundingClientRect()));
+    },[elm])
     
     return (
         <Center bgColor={color.base} >
@@ -53,11 +58,16 @@ const blogContents : NextPage = () => {
                                 <Center w={contWidth} margin={"50px 0 30px"} flexDir={"column"} color={color.white}>
                                     <Flex w={contWidth} alignItems={"center"} bgColor={"#40659D"} padding={"15px 20px"} borderRadius={"10px 10px 0 0 "} gap={"15px"}>
                                         <Center bgImage={'./images/menber/kansyu.png'} bgColor={color.white} bgSize={"cover"} bgPosition={"center"} width={"45px"} height={"45px"} borderRadius={"100%"}></Center>
-                                        <Text>{e.askForAi}</Text>
+                                        <Text width={"549px"} flexWrap={"wrap"}>{e.askForAi}</Text>
                                     </Flex>
-                                    <Flex w={contWidth} alignItems={"center"} bgColor={"#5C7DAD"} padding={"15px 20px"} borderRadius={"0 0 10px 10px"} gap={"15px"}>
-                                        <Center bgImage={'./images/menber/kansyu.png'} bgColor={color.white} bgSize={"cover"} bgPosition={"center"} width={"45px"} height={"45px"} borderRadius={"100%"}></Center>
-                                        <Text width={"549px"} flexWrap={"wrap"}>{e.aiAnswer}</Text>
+                                    <Flex flexDir={"column"}>
+                                        <Flex w={contWidth} ref={elm} maxHeight={askHeight ? "100px" : "100%" } transition={"1s ease"} bgColor={"#5C7DAD"} padding={"15px 20px"} gap={"15px"}>
+                                            <Center bgImage={'./images/menber/kansyu.png'} bgColor={color.white} bgSize={"cover"} bgPosition={"center"} width={"45px"} height={"45px"} borderRadius={"100%"}></Center>
+                                            <Text width={"549px"} flexWrap={"wrap"}>{e.aiAnswer}</Text>
+                                        </Flex>
+                                        <Center bgColor={"#5C7DAD"} padding={"15px 20px 15px"} borderRadius={"0 0 10px 10px"} onClick={() => setAskHeight(askHeight => !askHeight)}>
+                                            上
+                                        </Center>
                                     </Flex>
                                 </Center>
                             </Center>

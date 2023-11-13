@@ -43,11 +43,11 @@ function contTemplate(props : propsType) {
                             <Image src="./images/linkImg.svg" width={"18px"} position={"absolute"} right={"10px"} bottom={"10px"} />
                             </Flex>
                         </Flex>
-                        <Flex margin={"8px 10px"} gap="8px">
+                        <Flex margin={"8px 10px"} gap="8px" flexWrap={"wrap"} w={"320px"} h={"60px"} overflow={"hidden"}>
                             {e.tag.map((e : any,i : number) => {
                             return(
-                                <Center w={"68px"} h={"24px"} bgColor={color.main} borderRadius={"999px"}>
-                                <Text as={"p"} color={color.white} fontSize={"12px"} fontWeight={"semibold"}>#{e}</Text>
+                                <Center w={""} h={"24px"} padding={"0 16px"} bgColor={color.main} borderRadius={"999px"}>
+                                    <Text as={"p"} color={color.white} fontSize={"12px"} fontWeight={"semibold"}>#{e}</Text>
                                 </Center>
                             )
                             })}
