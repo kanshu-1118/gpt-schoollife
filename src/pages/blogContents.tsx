@@ -61,12 +61,12 @@ const blogContents : NextPage = () => {
                                         <Text width={"549px"} flexWrap={"wrap"}>{e.askForAi}</Text>
                                     </Flex>
                                     <Flex flexDir={"column"}>
-                                        <Flex w={contWidth} ref={elm} maxHeight={askHeight ? "100px" : "100%" } transition={"1s ease"} bgColor={"#5C7DAD"} padding={"15px 20px"} gap={"15px"}>
+                                        <Flex w={contWidth} ref={elm} maxHeight={askHeight ? "100px" : "200vh" } transition={"1s ease"} bgColor={"#5C7DAD"} padding={"15px 20px"} gap={"15px"}>
                                             <Center bgImage={'./images/menber/kansyu.png'} bgColor={color.white} bgSize={"cover"} bgPosition={"center"} width={"45px"} height={"45px"} borderRadius={"100%"}></Center>
                                             <Text width={"549px"} flexWrap={"wrap"}>{e.aiAnswer}</Text>
                                         </Flex>
                                         <Center bgColor={"#5C7DAD"} padding={"15px 20px 15px"} borderRadius={"0 0 10px 10px"} onClick={() => setAskHeight(askHeight => !askHeight)}>
-                                            上
+                                            <Image src='./images/downIcon.svg' w={"30px"} alt='' transform={askHeight ? "" : "rotateX(180deg)"} />
                                         </Center>
                                     </Flex>
                                 </Center>

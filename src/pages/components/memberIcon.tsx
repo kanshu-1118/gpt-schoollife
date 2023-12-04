@@ -11,7 +11,6 @@ const memberIcon = (props:propsType) => {
     const [memberImage,setMemberImage] = useState("")
 
 
-
     useEffect(() => {
         if (props.image == "かんしゅ〜") {
             setMemberImage("./images/menber/kansyu.png")

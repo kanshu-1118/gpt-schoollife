@@ -26,17 +26,16 @@ const snsContents = (props : propsType) => {
                     <AnimationBox w={"60px"} h={"60px"} borderRadius={"50%"}
                         border={`7px dashed ${props.color}`}
                         animate={{
-                            rotate:[0,180,0],
+                            rotate:[0,180],
                         }}
                         transition={{
                             duration: "6",
                             // ease:"",
-                            times:"[0,1,0]",
+                            times:"[0,1]",
                             repeat: "Infinity",
                             repeatDelay: "0",
                         }}
                         >
-
                     </AnimationBox>
                 </Center>
                 <Link href={props.link ?? `#`} passHref>

@@ -25,7 +25,7 @@ export default function Home() {
   const snsBtnArray = snsbutton.snsbutton.ArrayList
 
   const [geo,setGeo] = useState([])
-  const [contentsID,setContentsID] = useState()
+  
   useEffect(() => {
     const fecthello = async () => {
       const responce = await fetch(`./api/hello`)
